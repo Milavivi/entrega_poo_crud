@@ -1,4 +1,48 @@
 <!DOCTYPE html>
+<<<<<<< HEAD
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>crud</title>
+    @vite(['resources/css/app.css', 'resources/js/app.js'])
+    
+</head>
+<body class="font-sans bg-white">
+    <div class="relative flex items-top justify-center min-h-screen sm:items-center py-4 sm:pt-0">
+
+        @if (Route::has('login'))
+            <div class="fixed top-0 right-0 px-6 py-4 sm:block">
+                @auth
+                    <a href="{{ url('/dashboard') }}" class="text-sm text-pink-800 hover:text-pink-600 font-semibold underline">Dashboard</a>
+                @else
+                    <a href="{{ route('login') }}" class="text-sm text-pink-800 hover:text-pink-600 font-semibold underline mr-4">Entrar</a>
+                    @if (Route::has('register'))
+                        <a href="{{ route('register') }}" class="ml-4 text-sm bg-orange-500 hover:bg-orange-600 text-white font-bold py-2 px-4 rounded-full transition duration-300 shadow-md">
+                            Registrar
+                        </a>
+                    @endif
+                @endauth
+            </div>
+        @endif
+
+        <div class="max-w-6xl mx-auto sm:px-6 lg:px-8 text-center">
+            
+            <h1 class="text-6xl font-extrabold text-pink-800 mb-4">
+               Novos sabores
+            </h1>
+            
+            <p class="text-xl text-gray-500 mb-8">
+                Compartilhe e gerencie as suas receitas favoritas de forma suave e organizada.
+            </p>
+
+        </div>
+    </div>
+
+
+</body>
+</html>
+=======
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
     <head>
         <meta charset="utf-8">
@@ -275,3 +319,4 @@
         @endif
     </body>
 </html>
+>>>>>>> 3b157a2a34b724fd8ecadfdccc93d3fcf52b3b4e
